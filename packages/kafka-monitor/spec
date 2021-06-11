@@ -1,0 +1,8 @@
+---
+name: kafka-monitor
+
+dependencies:
+  - openjdk-8
+
+files:
+- kafka-monitor-2.5.10/kafka-monitor-2.5.10.tar.gz # https://github.com/linkedin/kafka-monitor/archive/refs/tags/2.5.10.tar.gz

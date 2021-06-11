@@ -1,0 +1,15 @@
+---
+name: kafka-monitor
+
+templates:
+  bin/ctl.erb: bin/ctl
+  config/log4j2.properties: config/log4j2.properties
+  config/multi-cluster-monitor.properties.erb: config/multi-cluster-monitor.properties
+  config/prometheus-exporter.yaml: config/prometheus-exporter.yaml
+  config/xinfra-monitor.properties.erb: config/xinfra-monitor.properties
+
+packages:
+  - openjdk-8
+  - kafka-monitor
+
+properties: {}
