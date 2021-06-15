@@ -14,9 +14,7 @@ case $1 in
 
   start)
     exec /var/vcap/packages/kafka-monitor/bin/single-cluster-monitor.sh \
-      --topic test \
-      --broker-list localhost:9092 \
-      --zookeeper localhost:2181
+      /var/vcap/jobs/kafka-monitor/config/xinfra-monitor.properties
     ;;
 
   *)

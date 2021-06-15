@@ -12,4 +12,10 @@ packages:
   - openjdk-8
   - kafka-monitor
 
+consumes:
+- name: zookeeper
+  type: zookeeper
+- name: kafka
+  type: conn
+
 properties: {}
