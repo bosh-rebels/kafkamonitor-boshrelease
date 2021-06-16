@@ -1,5 +1,5 @@
 ---
-name: kafkamonitor-boshrelease
+name: kafka-monitor
 blobstore:
   provider: local
   options:
