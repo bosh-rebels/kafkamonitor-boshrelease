@@ -2,11 +2,9 @@ set -e -x
 
 source /var/vcap/packages/openjdk-8/bosh/compile.env
 
-tar xzf kafka-monitor-2.5.10.tar.gz
-pushd kafka-monitor-2.5.10
-  git init
-#  ./gradlew -Pversion=2.5.10 jar
-  ./gradlew clean jar
+tar xzf kafka-monitor-2.5.10/kafka-monitor-2.5.10.tar.gz
+pushd kafka-monitor
+  ./gradlew jar
   cp -R build/ ${BOSH_INSTALL_TARGET}/build/
   cp -R bin/ ${BOSH_INSTALL_TARGET}/bin/
   cp -R config/ ${BOSH_INSTALL_TARGET}/config/
