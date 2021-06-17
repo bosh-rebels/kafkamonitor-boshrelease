@@ -1,3 +1,11 @@
+<%
+kafka = link('kafka')
+kafka_port = kafka.p('listen_port')
+zookeeper = link('zookeeper')
+zookeeper_port = zookeeper.p('client_port')
+
+zookeeper_connect = zookeeper.instances.map { |instance| "#{instance.address}:#{zookeeper_port}" }.first
+bootstrap_servers = kafka.instances.map { |instance| "#{instance.address}:#{kafka_port}" }.join(",") -%>
 # Copyright 2016 LinkedIn Corp. Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
 # file except in compliance with the License. You may obtain a copy of the License at
 #
@@ -41,14 +49,6 @@
 #
 # If using Secure Socket Layer for security protocol, SSL properties must be defined under
 # produce.producer.props, consume.consumer.props, as well as single-cluster-monitor props
-<%
-kafka = link('kafka')
-kafka_port = kafka.p('listen_port')
-zookeeper = link('zookeeper')
-zookeeper_port = zookeeper.p('client_port')
-
-zookeeper_connect = zookeeper.instances.map { |instance| "#{instance.address}:#{zookeeper_port}" }.first
-bootstrap_servers = kafka.instances.map { |instance| "#{instance.address}:#{kafka_port}" }.join(",") -%>
 
 {
   "single-cluster-monitor": {
@@ -79,12 +79,12 @@ bootstrap_servers = kafka.instances.map { |instance| "#{instance.address}:#{kafk
   },
 
   "offset-commit-service": {
-    "class.name": "com.linkedin.xinfra.monitor.services.OffsetCommitService",
-    "zookeeper.connect": "<%= zookeeper_connect %>",
-    "bootstrap.servers": "<%= bootstrap_servers %>",
-    "consumer.props": {
-      "group.id": "target-consumer-group"
-    }
+       "class.name": "com.linkedin.xinfra.monitor.services.OffsetCommitService",
+       "zookeeper.connect": "<%= zookeeper_connect %>",
+       "bootstrap.servers": "<%= bootstrap_servers %>",
+       "consumer.props": {
+           "group.id": "target-consumer-group"
+       }
   },
 
   "jolokia-service": {
@@ -95,81 +95,81 @@ bootstrap_servers = kafka.instances.map { |instance| "#{instance.address}:#{kafk
     "class.name": "com.linkedin.xinfra.monitor.services.DefaultMetricsReporterService",
     "report.interval.sec": 1,
     "report.metrics.list": [
-      "kmf:type=kafka-monitor:offline-runnable-count",
-      "kmf.services:type=produce-service,name=*:produce-availability-avg",
-      "kmf.services:type=consume-service,name=*:consume-availability-avg",
-      "kmf.services:type=produce-service,name=*:records-produced-total",
-      "kmf.services:type=consume-service,name=*:records-consumed-total",
-      "kmf.services:type=produce-service,name=*:records-produced-rate",
-      "kmf.services:type=produce-service,name=*:produce-error-rate",
-      "kmf.services:type=consume-service,name=*:consume-error-rate",
-      "kmf.services:type=consume-service,name=*:records-lost-total",
-      "kmf.services:type=consume-service,name=*:records-lost-rate",
-      "kmf.services:type=consume-service,name=*:records-duplicated-total",
-      "kmf.services:type=consume-service,name=*:records-delay-ms-avg",
-      "kmf.services:type=commit-availability-service,name=*:offsets-committed-avg",
-      "kmf.services:type=commit-availability-service,name=*:offsets-committed-total",
-      "kmf.services:type=commit-availability-service,name=*:failed-commit-offsets-avg",
-      "kmf.services:type=commit-availability-service,name=*:failed-commit-offsets-total",
-      "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-avg",
-      "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-max",
-      "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-99th",
-      "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-999th",
-      "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-9999th",
-      "kmf.services:type=cluster-topic-manipulation-service,name=*:topic-creation-metadata-propagation-ms-avg",
-      "kmf.services:type=cluster-topic-manipulation-service,name=*:topic-creation-metadata-propagation-ms-max",
-      "kmf.services:type=cluster-topic-manipulation-service,name=*:topic-deletion-metadata-propagation-ms-avg",
-      "kmf.services:type=cluster-topic-manipulation-service,name=*:topic-deletion-metadata-propagation-ms-max",
-      "kmf.services:type=offset-commit-service,name=*:offset-commit-availability-avg",
-      "kmf.services:type=offset-commit-service,name=*:offset-commit-service-success-rate",
-      "kmf.services:type=offset-commit-service,name=*:offset-commit-service-success-total",
-      "kmf.services:type=offset-commit-service,name=*:offset-commit-service-failure-rate",
-      "kmf.services:type=offset-commit-service,name=*:offset-commit-service-failure-total"
+        "kmf:type=kafka-monitor:offline-runnable-count",
+        "kmf.services:type=produce-service,name=*:produce-availability-avg",
+        "kmf.services:type=consume-service,name=*:consume-availability-avg",
+        "kmf.services:type=produce-service,name=*:records-produced-total",
+        "kmf.services:type=consume-service,name=*:records-consumed-total",
+        "kmf.services:type=produce-service,name=*:records-produced-rate",
+        "kmf.services:type=produce-service,name=*:produce-error-rate",
+        "kmf.services:type=consume-service,name=*:consume-error-rate",
+        "kmf.services:type=consume-service,name=*:records-lost-total",
+        "kmf.services:type=consume-service,name=*:records-lost-rate",
+        "kmf.services:type=consume-service,name=*:records-duplicated-total",
+        "kmf.services:type=consume-service,name=*:records-delay-ms-avg",
+        "kmf.services:type=commit-availability-service,name=*:offsets-committed-avg",
+        "kmf.services:type=commit-availability-service,name=*:offsets-committed-total",
+        "kmf.services:type=commit-availability-service,name=*:failed-commit-offsets-avg",
+        "kmf.services:type=commit-availability-service,name=*:failed-commit-offsets-total",
+        "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-avg",
+        "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-max",
+        "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-99th",
+        "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-999th",
+        "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-9999th",
+        "kmf.services:type=cluster-topic-manipulation-service,name=*:topic-creation-metadata-propagation-ms-avg",
+        "kmf.services:type=cluster-topic-manipulation-service,name=*:topic-creation-metadata-propagation-ms-max",
+        "kmf.services:type=cluster-topic-manipulation-service,name=*:topic-deletion-metadata-propagation-ms-avg",
+        "kmf.services:type=cluster-topic-manipulation-service,name=*:topic-deletion-metadata-propagation-ms-max",
+        "kmf.services:type=offset-commit-service,name=*:offset-commit-availability-avg",
+        "kmf.services:type=offset-commit-service,name=*:offset-commit-service-success-rate",
+        "kmf.services:type=offset-commit-service,name=*:offset-commit-service-success-total",
+        "kmf.services:type=offset-commit-service,name=*:offset-commit-service-failure-rate",
+        "kmf.services:type=offset-commit-service,name=*:offset-commit-service-failure-total"
     ]
   },
 
   "cluster-topic-manipulation-service":{
-    "class.name":"com.linkedin.xinfra.monitor.services.ClusterTopicManipulationService",
-    "zookeeper.connect": "<%= zookeeper_connect %>",
-    "bootstrap.servers": "<%= bootstrap_servers %>",
-    "topic": "xinfra-monitor-topic"
+     "class.name":"com.linkedin.xinfra.monitor.services.ClusterTopicManipulationService",
+     "zookeeper.connect": "<%= zookeeper_connect %>",
+     "bootstrap.servers": "<%= bootstrap_servers %>",
+     "topic": "xinfra-monitor-topic"
   },
 
 # Example produce-service to produce messages to cluster
   "produce-service": {
-    "class.name": "com.linkedin.kmf.services.ProduceService",
-    "topic": "xinfra-monitor-topic",
-    "zookeeper.connect": "<%= zookeeper_connect %>",
-    "bootstrap.servers": "<%= bootstrap_servers %>",
-    "consume.latency.sla.ms": "20000",
-    "consume.consumer.props": {
-    }
+      "class.name": "com.linkedin.xinfra.monitor.services.ProduceService",
+      "topic": "xinfra-monitor-topic",
+      "zookeeper.connect": "<%= zookeeper_connect %>",
+      "bootstrap.servers": "<%= bootstrap_servers %>",
+      "consume.latency.sla.ms": "20000",
+      "consume.consumer.props": {
+      }
   },
 
-#  Example consume-service to consume messages
+# Example consume-service to consume messages
   "consume-service": {
-    "class.name": "com.linkedin.kmf.services.ConsumeService",
-    "topic": "xinfra-monitor-topic",
-    "zookeeper.connect": "<%= zookeeper_connect %>",
-    "bootstrap.servers": "<%= bootstrap_servers %>",
-    "consume.latency.sla.ms": "20000",
-    "consume.consumer.props": {
-    }
+      "class.name": "com.linkedin.xinfra.monitor.services.ConsumeService",
+      "topic": "xinfra-monitor-topic",
+      "zookeeper.connect": "<%= zookeeper_connect %>",
+      "bootstrap.servers": "<%= bootstrap_servers %>",
+      "consume.latency.sla.ms": "20000",
+      "consume.consumer.props": {
+      }
   },
 
 #  Example statsd-service to report metrics
-  # "statsd-service": {
-  #   "class.name": "com.linkedin.kmf.services.StatsdMetricsReporterService",
-  #   "report.statsd.host": "localhost",
-  #   "report.statsd.port": "8125",
-  #   "report.statsd.prefix": "kafka-monitor",
-  #   "report.interval.sec": 1,
-  #   "report.metrics.list": [
-  #     "kmf:type=kafka-monitor:offline-runnable-count",
-  #     "kmf.services:type=produce-service,name=*:produce-availability-avg",
-  #     "kmf.services:type=consume-service,name=*:consume-availability-avg"
-  #   ]
-  # },
+#  "statsd-service": {
+#      "class.name": "com.linkedin.xinfra.monitor.services.StatsdMetricsReporterService",
+#      "report.statsd.host": "localhost",
+#      "report.statsd.port": "8125",
+#      "report.statsd.prefix": "kafka-monitor",
+#      "report.interval.sec": 1,
+#      "report.metrics.list": [
+#      "kmf:type=kafka-monitor:offline-runnable-count",
+#      "kmf.services:type=produce-service,name=*:produce-availability-avg",
+#      "kmf.services:type=consume-service,name=*:consume-availability-avg"
+#     ]
+#  },
 
 #  Example kafka-service to report metrics
   "reporter-kafka-service": {

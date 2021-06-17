@@ -1,0 +1,37 @@
+#!/bin/bash
+
+set -e
+
+RUN_DIR=/var/vcap/sys/run/kafka-monitor
+LOG_DIR=/var/vcap/sys/log/kafka-monitor
+PIDFILE=${RUN_DIR}/pid.nginx
+
+source /var/vcap/packages/nginx-1.17.3/bosh/runtime.env
+
+case $1 in
+
+  start)
+    mkdir -p $RUN_DIR $LOG_DIR
+    chown -R vcap:vcap $RUN_DIR $LOG_DIR
+    echo $$ > $PIDFILE
+
+    cp -R /var/vcap/packages/kafka-monitor/webapp/js \
+      /var/vcap/jobs/kafka-monitor/webapp/
+
+    exec nginx -c /var/vcap/jobs/kafka-monitor/config/nginx.conf \
+      >>  $LOG_DIR/nginx.stdout.log \
+      2>> $LOG_DIR/nginx.stderr.log
+    ;;
+
+  stop)
+    kill -9 `cat $PIDFILE`
+    rm -f $PIDFILE
+    ;;
+
+  *)
+    echo "Usage: $0 {start|status|cli}"
+    exit 1
+    ;;
+
+esac
+exit 0

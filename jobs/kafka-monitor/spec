@@ -2,14 +2,18 @@
 name: kafka-monitor
 
 templates:
-  bin/ctl.erb: bin/ctl
+  bin/ctl-nginx.erb: bin/ctl-nginx
+  bin/ctl-kafka-monitor.erb: bin/ctl-kafka-monitor
   config/log4j2.properties: config/log4j2.properties
   config/multi-cluster-monitor.properties.erb: config/multi-cluster-monitor.properties
   config/prometheus-exporter.yaml: config/prometheus-exporter.yaml
   config/xinfra-monitor.properties.erb: config/xinfra-monitor.properties
+  config/nginx.conf: config/nginx.conf
+  webapp/index.html.erb: webapp/index.html
 
 packages:
   - openjdk-8
+  - nginx-1.17.3
   - kafka-monitor
 
 consumes:
@@ -18,4 +22,46 @@ consumes:
 - name: kafka
   type: conn
 
-properties: {}
+properties:
+  monitored.mbeans:
+    description: Java beans to monitor with the static dashboard
+    default: |
+      {name: "kmf.services:type=cluster-topic-manipulation-service,name=*", attribute: "topic-creation-metadata-propagation-ms-avg"},
+      {name: "kmf.services:type=cluster-topic-manipulation-service,name=*", attribute: "topic-creation-metadata-propagation-ms-max"},
+      {name: "kmf.services:type=cluster-topic-manipulation-service,name=*", attribute: "topic-deletion-metadata-propagation-ms-avg"},
+      {name: "kmf.services:type=cluster-topic-manipulation-service,name=*", attribute: "topic-deletion-metadata-propagation-ms-max"},
+      {name: "kmf.services:type=commit-availability-service,name=*", attribute: "failed-commit-offsets-avg"},
+      {name: "kmf.services:type=commit-availability-service,name=*", attribute: "failed-commit-offsets-total"},
+      {name: "kmf.services:type=commit-availability-service,name=*", attribute: "offsets-committed-avg"},
+      {name: "kmf.services:type=commit-availability-service,name=*", attribute: "offsets-committed-total"},
+      {name: "kmf.services:type=commit-latency-service,name=*", attribute: "commit-offset-latency-ms-9999th"},
+      {name: "kmf.services:type=commit-latency-service,name=*", attribute: "commit-offset-latency-ms-999th"},
+      {name: "kmf.services:type=commit-latency-service,name=*", attribute: "commit-offset-latency-ms-99th"},
+      {name: "kmf.services:type=commit-latency-service,name=*", attribute: "commit-offset-latency-ms-avg"},
+      {name: "kmf.services:type=commit-latency-service,name=*", attribute: "commit-offset-latency-ms-max"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "consume-availability-avg"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "consume-error-rate"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-consumed-total"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-delay-ms-9999th"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-delay-ms-999th"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-delay-ms-99th"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-delay-ms-avg"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-delay-ms-max"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-duplicated-rate"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-duplicated-total"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-lost-rate"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-lost-total"},
+      {name: "kmf.services:type=offset-commit-service,name=*", attribute: "offset-commit-availability-avg"},
+      {name: "kmf.services:type=offset-commit-service,name=*", attribute: "offset-commit-service-failure-rate"},
+      {name: "kmf.services:type=offset-commit-service,name=*", attribute: "offset-commit-service-failure-total"},
+      {name: "kmf.services:type=offset-commit-service,name=*", attribute: "offset-commit-service-success-rate"},
+      {name: "kmf.services:type=offset-commit-service,name=*", attribute: "offset-commit-service-success-total"},
+      {name: "kmf.services:type=produce-service,name=*", attribute: "produce-availability-avg"},
+      {name: "kmf.services:type=produce-service,name=*", attribute: "produce-delay-ms-9999th"},
+      {name: "kmf.services:type=produce-service,name=*", attribute: "produce-delay-ms-999th"},
+      {name: "kmf.services:type=produce-service,name=*", attribute: "produce-delay-ms-99th"},
+      {name: "kmf.services:type=produce-service,name=*", attribute: "produce-delay-ms-avg"},
+      {name: "kmf.services:type=produce-service,name=*", attribute: "produce-error-rate"},
+      {name: "kmf.services:type=produce-service,name=*", attribute: "records-produced-rate"},
+      {name: "kmf.services:type=produce-service,name=*", attribute: "records-produced-total"},
+

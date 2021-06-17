@@ -1,5 +1,11 @@
 check process kafka-monitor
-  with pidfile /var/vcap/sys/run/kafka-monitor/pid
-  start program "/var/vcap/jobs/kafka-monitor/bin/ctl start"
-  stop program "/var/vcap/jobs/kafka-monitor/bin/ctl stop"
+  with pidfile /var/vcap/sys/run/kafka-monitor/pid.kafka-monitor
+  start program "/var/vcap/jobs/kafka-monitor/bin/ctl-kafka-monitor start"
+  stop program "/var/vcap/jobs/kafka-monitor/bin/ctl-kafka-monitor stop"
+  group vcap
+  
+check process kafka-monitor-nginx
+  with pidfile /var/vcap/sys/run/kafka-monitor/pid.nginx
+  start program "/var/vcap/jobs/kafka-monitor/bin/ctl-nginx start"
+  stop program "/var/vcap/jobs/kafka-monitor/bin/ctl-nginx stop"
   group vcap
