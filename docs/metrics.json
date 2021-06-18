@@ -1,0 +1,225 @@
+[
+  {
+    "service": "cluster-topic-manipulation-service",
+    "metrics": [
+      {
+        "name": "topic-creation-metadata-propagation-ms-avg",
+        "description": "The average propagation duration in ms of propagating topic creation data and metadata to all brokers in the cluster"
+      },
+      {
+        "name": "topic-creation-metadata-propagation-ms-max",
+        "description": "The maximum propagation time in ms of propagating topic creation data and metadata to all brokers in the cluster"
+      },
+      {
+        "name": "topic-deletion-metadata-propagation-ms-avg",
+        "description": "The average propagation duration in milliseconds of propagating the topic deletion data and metadata across all the brokers in the cluster."
+      },
+      {
+        "name": "topic-deletion-metadata-propagation-ms-max",
+        "description": "The maximum propagation time in milliseconds of propagating the topic deletion data and metadata across all the brokers in the cluster."
+      }
+    ]
+  },
+  {
+    "service": "commit-availability-service",
+    "metrics": [
+      {
+        "name": "offsets-committed-total",
+        "description": "The total number of offsets per second that are committed."
+      },
+      {
+        "name": "failed-commit-offsets-avg",
+        "description": "The average number of offsets per second that have failed."
+      },
+      {
+        "name": "failed-commit-offsets-total",
+        "description": "The total number of offsets per second that have failed."
+      },
+      {
+        "name": "offsets-committed-avg",
+        "desciption": "The average offset commits availability."
+      },
+      {
+        "name": "offsets-committed-total",
+        "description": ""
+      },
+      {
+        "name": "failed-commit-offsets-total",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "service": "commit-offset-latency",
+    "metrics": [
+      {
+        "name": "commit-offset-latency-ms-avg",
+        "description": "The average latency in ms of committing offset"
+      },
+      {
+        "name": "commit-offset-latency-ms-max",
+        "description": "The maximum latency in ms of committing offset"
+      },
+      {
+        "name": "commit-offset-latency-ms-99th",
+        "description": "The 99th percentile latency of committing offset"
+      },
+      {
+        "name": "commit-offset-latency-ms-999th",
+        "description": "The 99.9th percentile latency of committing offset"
+      },
+      {
+        "name": "commit-offset-latency-ms-9999th",
+        "description": "The 99.99th percentile latency of committing offset"
+      }
+    ]
+  },
+  {
+    "service": "consume-service",
+    "metrics": [
+      {
+        "name": "bytes-consumed-rate",
+        "description": "The average number of bytes per second that are consumed"
+      },
+      {
+        "name": "consume-error-rate",
+        "description": "The average number of errors per second"
+      },
+      {
+        "name": "consume-error-total",
+        "description": "The total number of errors"
+      },
+      {
+        "name": "records-consumed-rate",
+        "description": "The average number of records per second that are consumed"
+      },
+      {
+        "name": "records-consumed-total",
+        "description": "The total number of records that are consumed"
+      },
+      {
+        "name": "records-duplicated-rate",
+        "description": "The average number of records per second that are duplicated"
+      },
+      {
+        "name": "records-duplicated-total",
+        "description": "The total number of records that are duplicated"
+      },
+      {
+        "name": "records-lost-rate",
+        "description": "The average number of records per second that are lost"
+      },
+      {
+        "name": "records-lost-total",
+        "description": "The total number of records that are lost"
+      },
+      {
+        "name": "records-delayed-rate",
+        "description": "The average number of records per second that are either lost or arrive after maximum allowed latency under SLA"
+      },
+      {
+        "name": "records-delayed-total",
+        "description": "The total number of records that are either lost or arrive after maximum allowed latency under SLA"
+      },
+      {
+        "name": "records-delay-ms-avg",
+        "description": "The average latency of records from producer to consumer"
+      },
+      {
+        "name": "records-delay-ms-max",
+        "description": "The maximum latency of records from producer to consumer"
+      },
+      {
+        "name": "records-delay-ms-99th",
+        "description": "The 99th percentile latency of records from producer to consumer"
+      },
+      {
+        "name": "records-delay-ms-999th",
+        "description": "The 99.9th percentile latency of records from producer to consumer"
+      },
+      {
+        "name": "records-delay-ms-9999th",
+        "description": "The 99.99th percentile latency of records from producer to consumer"
+      },
+      {
+        "name": "consume-availability-avg",
+        "description": "The average consume availability"
+      }
+    ]
+  },
+  {
+    "service": "offset-commit-service",
+    "sensor": "",
+    "metrics": [
+      {
+        "name": "offset-commit-service-success-rate",
+        "description": "The success rate of group coordinator accepting consumer offset commit requests."
+      },
+      {
+        "name": "offset-commit-service-success-total",
+        "description": "The total count of group coordinator successfully accepting consumer offset commit requests."
+      },
+      {
+        "name": "offset-commit-service-failure-rate",
+        "description": "The failure rate of group coordinator accepting consumer offset commit requests."
+      },
+      {
+        "name": "offset-commit-service-failure-total",
+        "description": "The total count of group coordinator unsuccessfully receiving consumer offset commit requests."
+      }
+    ]
+  },
+  {
+    "service": "produce-service",
+    "metrics": [
+      {
+        "name": "records-produced-rate",
+        "description": "The average number of records per second that are produced"
+      },
+      {
+        "name": "records-produced-total",
+        "description": "The total number of records that are produced"
+      },
+      {
+        "name": "produce-error-rate",
+        "description": "The average number of errors per second"
+      },
+      {
+        "name": "produce-error-total",
+        "description": "The total number of errors"
+      },
+      {
+        "name": "produce-delay-ms-avg",
+        "description": "The average delay in ms for produce request"
+      },
+      {
+        "name": "produce-delay-ms-max",
+        "description": "The maximum delay in ms for produce request"
+      },
+      {
+        "name": "produce-delay-ms-99th",
+        "description": "The 99th percentile delay in ms for produce request"
+      },
+      {
+        "name": "produce-delay-ms-999th",
+        "description": "The 99.9th percentile delay in ms for produce request"
+      },
+      {
+        "name": "produce-delay-ms-9999th",
+        "description": "The 99.99th percentile delay in ms for produce request"
+      },
+      {
+        "name": "produce-availability-avg",
+        "description": "The average produce availability"
+      },
+      {
+        "name": "records-produced-rate-partition-*",
+        "description": "The average number of records per second that are produced to this * partition"
+      },
+      {
+        "name": "produce-error-rate-partition-*",
+        "description": "The average number of errors per second when producing to this * partition"
+      }
+    ]
+  }
+]
