@@ -26,6 +26,7 @@ properties:
   monitored.mbeans:
     description: Java beans to monitor with the static dashboard
     default: |
+      {name: "kmf:type=kafka-monitor,name=*", attribute: "offline-runnable-count"},
       {name: "kmf.services:type=cluster-topic-manipulation-service,name=*", attribute: "topic-creation-metadata-propagation-ms-avg"},
       {name: "kmf.services:type=cluster-topic-manipulation-service,name=*", attribute: "topic-creation-metadata-propagation-ms-max"},
       {name: "kmf.services:type=cluster-topic-manipulation-service,name=*", attribute: "topic-deletion-metadata-propagation-ms-avg"},
@@ -41,12 +42,16 @@ properties:
       {name: "kmf.services:type=commit-latency-service,name=*", attribute: "commit-offset-latency-ms-max"},
       {name: "kmf.services:type=consume-service,name=*", attribute: "consume-availability-avg"},
       {name: "kmf.services:type=consume-service,name=*", attribute: "consume-error-rate"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "consume-error-total"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-consumed-rate"},
       {name: "kmf.services:type=consume-service,name=*", attribute: "records-consumed-total"},
       {name: "kmf.services:type=consume-service,name=*", attribute: "records-delay-ms-9999th"},
       {name: "kmf.services:type=consume-service,name=*", attribute: "records-delay-ms-999th"},
       {name: "kmf.services:type=consume-service,name=*", attribute: "records-delay-ms-99th"},
       {name: "kmf.services:type=consume-service,name=*", attribute: "records-delay-ms-avg"},
       {name: "kmf.services:type=consume-service,name=*", attribute: "records-delay-ms-max"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-delayed-rate"},
+      {name: "kmf.services:type=consume-service,name=*", attribute: "records-delayed-total"},
       {name: "kmf.services:type=consume-service,name=*", attribute: "records-duplicated-rate"},
       {name: "kmf.services:type=consume-service,name=*", attribute: "records-duplicated-total"},
       {name: "kmf.services:type=consume-service,name=*", attribute: "records-lost-rate"},
@@ -61,7 +66,8 @@ properties:
       {name: "kmf.services:type=produce-service,name=*", attribute: "produce-delay-ms-999th"},
       {name: "kmf.services:type=produce-service,name=*", attribute: "produce-delay-ms-99th"},
       {name: "kmf.services:type=produce-service,name=*", attribute: "produce-delay-ms-avg"},
+      {name: "kmf.services:type=produce-service,name=*", attribute: "produce-delay-ms-max"},
       {name: "kmf.services:type=produce-service,name=*", attribute: "produce-error-rate"},
+      {name: "kmf.services:type=produce-service,name=*", attribute: "produce-error-total"},
       {name: "kmf.services:type=produce-service,name=*", attribute: "records-produced-rate"},
       {name: "kmf.services:type=produce-service,name=*", attribute: "records-produced-total"},
-

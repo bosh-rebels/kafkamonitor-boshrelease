@@ -38,14 +38,6 @@
       {
         "name": "offsets-committed-avg",
         "desciption": "The average offset commits availability."
-      },
-      {
-        "name": "offsets-committed-total",
-        "description": ""
-      },
-      {
-        "name": "failed-commit-offsets-total",
-        "description": ""
       }
     ]
   },
@@ -166,6 +158,10 @@
       {
         "name": "offset-commit-service-failure-total",
         "description": "The total count of group coordinator unsuccessfully receiving consumer offset commit requests."
+      },
+      {
+        "name": "offset-commit-availability-avg",
+        "description": "The average offset commit availability with respect to the group coordinator."
       }
     ]
   },
