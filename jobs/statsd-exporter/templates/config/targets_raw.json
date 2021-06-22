@@ -1,0 +1,474 @@
+[{
+  "expr": "kafka_monitor_cluster_topic_manipulation_service_cluster_topic_manipulation_service_topic_creation_metadata_propagation_ms_avg",
+  "interval": "",
+  "legendFormat": "topic_creation_metadata_propagation_ms_avg",
+  "refId": "jnr"
+},
+{
+  "expr": "kafka_monitor_cluster_topic_manipulation_service_cluster_topic_manipulation_service_topic_creation_metadata_propagation_ms_max",
+  "interval": "",
+  "legendFormat": "topic_creation_metadata_propagation_ms_max",
+  "refId": "JGb"
+},
+{
+  "expr": "kafka_monitor_cluster_topic_manipulation_service_cluster_topic_manipulation_service_topic_deletion_metadata_propagation_ms_avg",
+  "interval": "",
+  "legendFormat": "topic_deletion_metadata_propagation_ms_avg",
+  "refId": "aCn"
+},
+{
+  "expr": "kafka_monitor_cluster_topic_manipulation_service_cluster_topic_manipulation_service_topic_deletion_metadata_propagation_ms_max",
+  "interval": "",
+  "legendFormat": "topic_deletion_metadata_propagation_ms_max",
+  "refId": "tzc"
+},
+{
+  "expr": "kafka_monitor_commit_availability_service_consume_service_failed_commit_offsets_avg",
+  "interval": "",
+  "legendFormat": "failed_commit_offsets_avg",
+  "refId": "cik"
+},
+{
+  "expr": "kafka_monitor_commit_availability_service_consume_service_failed_commit_offsets_total",
+  "interval": "",
+  "legendFormat": "failed_commit_offsets_total",
+  "refId": "AEL"
+},
+{
+  "expr": "kafka_monitor_commit_availability_service_consume_service_offsets_committed_avg",
+  "interval": "",
+  "legendFormat": "offsets_committed_avg",
+  "refId": "jtg"
+},
+{
+  "expr": "kafka_monitor_commit_availability_service_consume_service_offsets_committed_total",
+  "interval": "",
+  "legendFormat": "offsets_committed_total",
+  "refId": "bIP"
+},
+{
+  "expr": "kafka_monitor_commit_availability_service_single_cluster_monitor_failed_commit_offsets_avg",
+  "interval": "",
+  "legendFormat": "failed_commit_offsets_avg",
+  "refId": "IFq"
+},
+{
+  "expr": "kafka_monitor_commit_availability_service_single_cluster_monitor_failed_commit_offsets_total",
+  "interval": "",
+  "legendFormat": "failed_commit_offsets_total",
+  "refId": "wni"
+},
+{
+  "expr": "kafka_monitor_commit_availability_service_single_cluster_monitor_offsets_committed_avg",
+  "interval": "",
+  "legendFormat": "offsets_committed_avg",
+  "refId": "tHc"
+},
+{
+  "expr": "kafka_monitor_commit_availability_service_single_cluster_monitor_offsets_committed_total",
+  "interval": "",
+  "legendFormat": "offsets_committed_total",
+  "refId": "aHd"
+},
+{
+  "expr": "kafka_monitor_commit_latency_service_consume_service_commit_offset_latency_ms_9999th",
+  "interval": "",
+  "legendFormat": "commit_offset_latency_ms_9999th",
+  "refId": "MhE"
+},
+{
+  "expr": "kafka_monitor_commit_latency_service_consume_service_commit_offset_latency_ms_999th",
+  "interval": "",
+  "legendFormat": "commit_offset_latency_ms_999th",
+  "refId": "SBU"
+},
+{
+  "expr": "kafka_monitor_commit_latency_service_consume_service_commit_offset_latency_ms_99th",
+  "interval": "",
+  "legendFormat": "commit_offset_latency_ms_99th",
+  "refId": "Cnq"
+},
+{
+  "expr": "kafka_monitor_commit_latency_service_consume_service_commit_offset_latency_ms_avg",
+  "interval": "",
+  "legendFormat": "commit_offset_latency_ms_avg",
+  "refId": "Eek"
+},
+{
+  "expr": "kafka_monitor_commit_latency_service_consume_service_commit_offset_latency_ms_max",
+  "interval": "",
+  "legendFormat": "commit_offset_latency_ms_max",
+  "refId": "MCp"
+},
+{
+  "expr": "kafka_monitor_commit_latency_service_single_cluster_monitor_commit_offset_latency_ms_9999th",
+  "interval": "",
+  "legendFormat": "commit_offset_latency_ms_9999th",
+  "refId": "rjw"
+},
+{
+  "expr": "kafka_monitor_commit_latency_service_single_cluster_monitor_commit_offset_latency_ms_999th",
+  "interval": "",
+  "legendFormat": "commit_offset_latency_ms_999th",
+  "refId": "Rgt"
+},
+{
+  "expr": "kafka_monitor_commit_latency_service_single_cluster_monitor_commit_offset_latency_ms_99th",
+  "interval": "",
+  "legendFormat": "commit_offset_latency_ms_99th",
+  "refId": "Kdw"
+},
+{
+  "expr": "kafka_monitor_commit_latency_service_single_cluster_monitor_commit_offset_latency_ms_avg",
+  "interval": "",
+  "legendFormat": "commit_offset_latency_ms_avg",
+  "refId": "ghL"
+},
+{
+  "expr": "kafka_monitor_commit_latency_service_single_cluster_monitor_commit_offset_latency_ms_max",
+  "interval": "",
+  "legendFormat": "commit_offset_latency_ms_max",
+  "refId": "PCj"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_consume_availability_avg",
+  "interval": "",
+  "legendFormat": "consume_availability_avg",
+  "refId": "wTM"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_consume_error_rate",
+  "interval": "",
+  "legendFormat": "consume_error_rate",
+  "refId": "RaF"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_consume_error_total",
+  "interval": "",
+  "legendFormat": "consume_error_total",
+  "refId": "ScE"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_consumed_rate",
+  "interval": "",
+  "legendFormat": "records_consumed_rate",
+  "refId": "hiz"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_consumed_total",
+  "interval": "",
+  "legendFormat": "records_consumed_total",
+  "refId": "sHE"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_delay_ms_9999th",
+  "interval": "",
+  "legendFormat": "records_delay_ms_9999th",
+  "refId": "mwv"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_delay_ms_999th",
+  "interval": "",
+  "legendFormat": "records_delay_ms_999th",
+  "refId": "krG"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_delay_ms_99th",
+  "interval": "",
+  "legendFormat": "records_delay_ms_99th",
+  "refId": "YKM"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_delay_ms_avg",
+  "interval": "",
+  "legendFormat": "records_delay_ms_avg",
+  "refId": "tPs"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_delay_ms_max",
+  "interval": "",
+  "legendFormat": "records_delay_ms_max",
+  "refId": "uUm"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_delayed_rate",
+  "interval": "",
+  "legendFormat": "records_delayed_rate",
+  "refId": "EtK"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_delayed_total",
+  "interval": "",
+  "legendFormat": "records_delayed_total",
+  "refId": "oeL"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_duplicated_rate",
+  "interval": "",
+  "legendFormat": "records_duplicated_rate",
+  "refId": "wXS"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_duplicated_total",
+  "interval": "",
+  "legendFormat": "records_duplicated_total",
+  "refId": "MwR"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_lost_rate",
+  "interval": "",
+  "legendFormat": "records_lost_rate",
+  "refId": "yXo"
+},
+{
+  "expr": "kafka_monitor_consume_service_consume_service_records_lost_total",
+  "interval": "",
+  "legendFormat": "records_lost_total",
+  "refId": "PMF"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_consume_availability_avg",
+  "interval": "",
+  "legendFormat": "consume_availability_avg",
+  "refId": "fiD"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_consume_error_rate",
+  "interval": "",
+  "legendFormat": "consume_error_rate",
+  "refId": "mZd"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_consume_error_total",
+  "interval": "",
+  "legendFormat": "consume_error_total",
+  "refId": "lHg"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_consumed_rate",
+  "interval": "",
+  "legendFormat": "records_consumed_rate",
+  "refId": "FhA"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_consumed_total",
+  "interval": "",
+  "legendFormat": "records_consumed_total",
+  "refId": "pZN"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delay_ms_9999th",
+  "interval": "",
+  "legendFormat": "records_delay_ms_9999th",
+  "refId": "CUC"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delay_ms_999th",
+  "interval": "",
+  "legendFormat": "records_delay_ms_999th",
+  "refId": "vyr"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delay_ms_99th",
+  "interval": "",
+  "legendFormat": "records_delay_ms_99th",
+  "refId": "iJT"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delay_ms_avg",
+  "interval": "",
+  "legendFormat": "records_delay_ms_avg",
+  "refId": "jbh"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delay_ms_max",
+  "interval": "",
+  "legendFormat": "records_delay_ms_max",
+  "refId": "cey"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delayed_rate",
+  "interval": "",
+  "legendFormat": "records_delayed_rate",
+  "refId": "dfc"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delayed_total",
+  "interval": "",
+  "legendFormat": "records_delayed_total",
+  "refId": "wkn"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_duplicated_rate",
+  "interval": "",
+  "legendFormat": "records_duplicated_rate",
+  "refId": "LXK"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_duplicated_total",
+  "interval": "",
+  "legendFormat": "records_duplicated_total",
+  "refId": "Guh"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_lost_rate",
+  "interval": "",
+  "legendFormat": "records_lost_rate",
+  "refId": "wKz"
+},
+{
+  "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_lost_total",
+  "interval": "",
+  "legendFormat": "records_lost_total",
+  "refId": "XLB"
+},
+{
+  "expr": "kafka_monitor_offset_commit_service_offset_commit_service_offset_commit_availability_avg",
+  "interval": "",
+  "legendFormat": "offset_commit_availability_avg",
+  "refId": "ETw"
+},
+{
+  "expr": "kafka_monitor_offset_commit_service_offset_commit_service_offset_commit_service_failure_rate",
+  "interval": "",
+  "legendFormat": "offset_commit_service_failure_rate",
+  "refId": "BWt"
+},
+{
+  "expr": "kafka_monitor_offset_commit_service_offset_commit_service_offset_commit_service_failure_total",
+  "interval": "",
+  "legendFormat": "offset_commit_service_failure_total",
+  "refId": "bqJ"
+},
+{
+  "expr": "kafka_monitor_offset_commit_service_offset_commit_service_offset_commit_service_success_rate",
+  "interval": "",
+  "legendFormat": "offset_commit_service_success_rate",
+  "refId": "KGV"
+},
+{
+  "expr": "kafka_monitor_offset_commit_service_offset_commit_service_offset_commit_service_success_total",
+  "interval": "",
+  "legendFormat": "offset_commit_service_success_total",
+  "refId": "dQA"
+},
+{
+  "expr": "kafka_monitor_produce_service_produce_service_produce_availability_avg",
+  "interval": "",
+  "legendFormat": "produce_availability_avg",
+  "refId": "pFa"
+},
+{
+  "expr": "kafka_monitor_produce_service_produce_service_produce_delay_ms_9999th",
+  "interval": "",
+  "legendFormat": "produce_delay_ms_9999th",
+  "refId": "XZv"
+},
+{
+  "expr": "kafka_monitor_produce_service_produce_service_produce_delay_ms_999th",
+  "interval": "",
+  "legendFormat": "produce_delay_ms_999th",
+  "refId": "BQY"
+},
+{
+  "expr": "kafka_monitor_produce_service_produce_service_produce_delay_ms_99th",
+  "interval": "",
+  "legendFormat": "produce_delay_ms_99th",
+  "refId": "hma"
+},
+{
+  "expr": "kafka_monitor_produce_service_produce_service_produce_delay_ms_avg",
+  "interval": "",
+  "legendFormat": "produce_delay_ms_avg",
+  "refId": "Wsq"
+},
+{
+  "expr": "kafka_monitor_produce_service_produce_service_produce_delay_ms_max",
+  "interval": "",
+  "legendFormat": "produce_delay_ms_max",
+  "refId": "atQ"
+},
+{
+  "expr": "kafka_monitor_produce_service_produce_service_produce_error_rate",
+  "interval": "",
+  "legendFormat": "produce_error_rate",
+  "refId": "Ixe"
+},
+{
+  "expr": "kafka_monitor_produce_service_produce_service_produce_error_total",
+  "interval": "",
+  "legendFormat": "produce_error_total",
+  "refId": "ETL"
+},
+{
+  "expr": "kafka_monitor_produce_service_produce_service_records_produced_rate",
+  "interval": "",
+  "legendFormat": "records_produced_rate",
+  "refId": "qlo"
+},
+{
+  "expr": "kafka_monitor_produce_service_produce_service_records_produced_total",
+  "interval": "",
+  "legendFormat": "records_produced_total",
+  "refId": "UDl"
+},
+{
+  "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_availability_avg",
+  "interval": "",
+  "legendFormat": "produce_availability_avg",
+  "refId": "Xba"
+},
+{
+  "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_delay_ms_9999th",
+  "interval": "",
+  "legendFormat": "produce_delay_ms_9999th",
+  "refId": "sWg"
+},
+{
+  "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_delay_ms_999th",
+  "interval": "",
+  "legendFormat": "produce_delay_ms_999th",
+  "refId": "qyI"
+},
+{
+  "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_delay_ms_99th",
+  "interval": "",
+  "legendFormat": "produce_delay_ms_99th",
+  "refId": "GXT"
+},
+{
+  "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_delay_ms_avg",
+  "interval": "",
+  "legendFormat": "produce_delay_ms_avg",
+  "refId": "IqV"
+},
+{
+  "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_delay_ms_max",
+  "interval": "",
+  "legendFormat": "produce_delay_ms_max",
+  "refId": "xyG"
+},
+{
+  "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_error_rate",
+  "interval": "",
+  "legendFormat": "produce_error_rate",
+  "refId": "hJx"
+},
+{
+  "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_error_total",
+  "interval": "",
+  "legendFormat": "produce_error_total",
+  "refId": "vnC"
+},
+{
+  "expr": "kafka_monitor_produce_service_single_cluster_monitor_records_produced_rate",
+  "interval": "",
+  "legendFormat": "records_produced_rate",
+  "refId": "Uvm"
+},
+{
+  "expr": "kafka_monitor_produce_service_single_cluster_monitor_records_produced_total",
+  "interval": "",
+  "legendFormat": "records_produced_total",
+  "refId": "yEj"
+}]
