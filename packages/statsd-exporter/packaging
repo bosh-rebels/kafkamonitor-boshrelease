@@ -1,0 +1,8 @@
+set -e
+
+tar xzf statsd_exporter-0.21.0/statsd_exporter-0.21.0.linux-amd64.tar.gz
+
+pushd statsd_exporter-0.21.0.linux-amd64
+  cp -f statsd_exporter ${BOSH_INSTALL_TARGET}
+  chmod +x ${BOSH_INSTALL_TARGET}/statsd_exporter
+popd

@@ -86,6 +86,9 @@ instance_groups:
   - name: kafka-monitor
     release: kafka-monitor
     properties: {}
+  - name: statsd-exporter
+    release: kafka-monitor
+    properties: {}
 - name: sanity-test
   azs: [z1, z2, z3]
   instances: 1

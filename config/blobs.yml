@@ -1,3 +1,6 @@
 kafka-monitor-2.5.10/kafka-monitor-2.5.10.tar.gz:
   size: 133715485
   sha: sha256:f6e6c0c1f830db5d1f01a6ce0386fc4b06ce50ee51dbf66589bdd767f7b66181
+statsd_exporter-0.21.0/statsd_exporter-0.21.0.linux-amd64.tar.gz:
+  size: 6850197
+  sha: sha256:3b39a200875a2d3399ae9e1cf3939cd58a8d44494fbad90fa93ec4b3a86081a1

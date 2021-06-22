@@ -1,0 +1,7 @@
+---
+name: statsd-exporter
+
+dependencies: []
+
+files:
+- statsd_exporter-0.21.0/statsd_exporter-0.21.0.linux-amd64.tar.gz # https://github.com/prometheus/statsd_exporter/releases/download/v0.21.0/statsd_exporter-0.21.0.linux-amd64.tar.gz

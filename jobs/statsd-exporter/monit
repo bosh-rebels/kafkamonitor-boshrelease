@@ -1,0 +1,5 @@
+check process statsd-exporter
+  with pidfile /var/vcap/sys/run/statsd-exporter/pid
+  start program "/var/vcap/jobs/statsd-exporter/bin/ctl start"
+  stop program "/var/vcap/jobs/statsd-exporter/bin/ctl stop"
+  group vcap

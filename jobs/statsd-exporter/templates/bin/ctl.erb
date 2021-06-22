@@ -1,0 +1,35 @@
+#!/bin/bash
+
+set -e
+
+RUN_DIR=/var/vcap/sys/run/statsd-exporter
+LOG_DIR=/var/vcap/sys/log/statsd-exporter
+PIDFILE=${RUN_DIR}/pid
+
+case $1 in
+
+  start)
+    mkdir -p $RUN_DIR $LOG_DIR
+    chown -R vcap:vcap $RUN_DIR $LOG_DIR
+    echo $$ > $PIDFILE
+
+    exec /var/vcap/packages/statsd-exporter/statsd_exporter \
+      --statsd.listen-udp=":9125" \
+      --statsd.listen-tcp=":9125" \
+      --statsd.mapping-config=/var/vcap/jobs/statsd-exporter/config/statsd_mapping.yml \
+      >>  $LOG_DIR/statsd_exporter.stdout.log \
+      2>> $LOG_DIR/statsd_exporter.stderr.log
+    ;;
+
+  stop)
+    kill -9 `cat $PIDFILE`
+    rm -f $PIDFILE
+    ;;
+
+  *)
+    echo "Usage: $0 {start|status|cli}"
+    exit 1
+    ;;
+
+esac
+exit 0

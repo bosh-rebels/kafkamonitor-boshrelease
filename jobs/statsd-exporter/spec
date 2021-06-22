@@ -1,0 +1,11 @@
+---
+name: statsd-exporter
+
+templates:
+  bin/ctl.erb: bin/ctl
+  config/statsd_mapping.yml.erb: config/statsd_mapping.yml
+
+packages:
+- statsd-exporter
+
+properties: {}

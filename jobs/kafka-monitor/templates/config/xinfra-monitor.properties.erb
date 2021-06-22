@@ -173,18 +173,60 @@ bootstrap_servers = kafka.instances.map { |instance| "#{instance.address}:#{kafk
   },
 
 #  Example statsd-service to report metrics
-#  "statsd-service": {
-#      "class.name": "com.linkedin.xinfra.monitor.services.StatsdMetricsReporterService",
-#      "report.statsd.host": "localhost",
-#      "report.statsd.port": "8125",
-#      "report.statsd.prefix": "kafka-monitor",
-#      "report.interval.sec": 1,
-#      "report.metrics.list": [
-#      "kmf:type=kafka-monitor:offline-runnable-count",
-#      "kmf.services:type=produce-service,name=*:produce-availability-avg",
-#      "kmf.services:type=consume-service,name=*:consume-availability-avg"
-#     ]
-#  },
+  "statsd-service": {
+      "class.name": "com.linkedin.xinfra.monitor.services.StatsdMetricsReporterService",
+      "report.statsd.host": "localhost",
+      "report.statsd.port": "9125",
+      "report.statsd.prefix": "kafka-monitor",
+      "report.interval.sec": 1,
+      "report.metrics.list": [
+      "kmf:type=kafka-monitor,name=*:offline-runnable-count",
+      "kmf.services:type=cluster-topic-manipulation-service,name=*:topic-creation-metadata-propagation-ms-avg",
+      "kmf.services:type=cluster-topic-manipulation-service,name=*:topic-creation-metadata-propagation-ms-max",
+      "kmf.services:type=cluster-topic-manipulation-service,name=*:topic-deletion-metadata-propagation-ms-avg",
+      "kmf.services:type=cluster-topic-manipulation-service,name=*:topic-deletion-metadata-propagation-ms-max",
+      "kmf.services:type=commit-availability-service,name=*:failed-commit-offsets-avg",
+      "kmf.services:type=commit-availability-service,name=*:failed-commit-offsets-total",
+      "kmf.services:type=commit-availability-service,name=*:offsets-committed-avg",
+      "kmf.services:type=commit-availability-service,name=*:offsets-committed-total",
+      "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-9999th",
+      "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-999th",
+      "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-99th",
+      "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-avg",
+      "kmf.services:type=commit-latency-service,name=*:commit-offset-latency-ms-max",
+      "kmf.services:type=consume-service,name=*:consume-availability-avg",
+      "kmf.services:type=consume-service,name=*:consume-error-rate",
+      "kmf.services:type=consume-service,name=*:consume-error-total",
+      "kmf.services:type=consume-service,name=*:records-consumed-rate",
+      "kmf.services:type=consume-service,name=*:records-consumed-total",
+      "kmf.services:type=consume-service,name=*:records-delay-ms-9999th",
+      "kmf.services:type=consume-service,name=*:records-delay-ms-999th",
+      "kmf.services:type=consume-service,name=*:records-delay-ms-99th",
+      "kmf.services:type=consume-service,name=*:records-delay-ms-avg",
+      "kmf.services:type=consume-service,name=*:records-delay-ms-max",
+      "kmf.services:type=consume-service,name=*:records-delayed-rate",
+      "kmf.services:type=consume-service,name=*:records-delayed-total",
+      "kmf.services:type=consume-service,name=*:records-duplicated-rate",
+      "kmf.services:type=consume-service,name=*:records-duplicated-total",
+      "kmf.services:type=consume-service,name=*:records-lost-rate",
+      "kmf.services:type=consume-service,name=*:records-lost-total",
+      "kmf.services:type=offset-commit-service,name=*:offset-commit-availability-avg",
+      "kmf.services:type=offset-commit-service,name=*:offset-commit-service-failure-rate",
+      "kmf.services:type=offset-commit-service,name=*:offset-commit-service-failure-total",
+      "kmf.services:type=offset-commit-service,name=*:offset-commit-service-success-rate",
+      "kmf.services:type=offset-commit-service,name=*:offset-commit-service-success-total",
+      "kmf.services:type=produce-service,name=*:produce-availability-avg",
+      "kmf.services:type=produce-service,name=*:produce-delay-ms-9999th",
+      "kmf.services:type=produce-service,name=*:produce-delay-ms-999th",
+      "kmf.services:type=produce-service,name=*:produce-delay-ms-99th",
+      "kmf.services:type=produce-service,name=*:produce-delay-ms-avg",
+      "kmf.services:type=produce-service,name=*:produce-delay-ms-max",
+      "kmf.services:type=produce-service,name=*:produce-error-rate",
+      "kmf.services:type=produce-service,name=*:produce-error-total",
+      "kmf.services:type=produce-service,name=*:records-produced-rate",
+      "kmf.services:type=produce-service,name=*:records-produced-total"
+     ]
+  },
 
 #  Example kafka-service to report metrics
   "reporter-kafka-service": {
