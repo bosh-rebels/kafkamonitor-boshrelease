@@ -15,10 +15,10 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
+  "id": 39,
   "links": [],
   "panels": [
     {
-      "id":526,
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -32,7 +32,14 @@
       },
       "fill": 1,
       "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
       "hiddenSeries": false,
+      "id": 526,
       "legend": {
         "avg": false,
         "current": false,
@@ -57,10 +64,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
       "targets": [
         {
           "expr": "kafka_monitor_cluster_topic_manipulation_service_cluster_topic_manipulation_service_topic_creation_metadata_propagation_ms_avg",
@@ -75,16 +78,17 @@
           "refId": "JGb"
         }
       ],
-      "title": "Topic Creation Metadata Propagation ms",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
+      "title": "Topic Creation Metadata Propagation ms",
       "tooltip": {
         "shared": true,
         "sort": 0,
         "value_type": "individual"
       },
+      "type": "graph",
       "xaxis": {
         "buckets": null,
         "mode": "time",
@@ -92,14 +96,30 @@
         "show": true,
         "values": []
       },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
       "yaxis": {
         "align": false,
         "alignLevel": null
-      },
-      "type": "graph"
+      }
     },
     {
-      "id":584,
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -113,7 +133,14 @@
       },
       "fill": 1,
       "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
       "hiddenSeries": false,
+      "id": 584,
       "legend": {
         "avg": false,
         "current": false,
@@ -138,10 +165,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
       "targets": [
         {
           "expr": "kafka_monitor_cluster_topic_manipulation_service_cluster_topic_manipulation_service_topic_deletion_metadata_propagation_ms_avg",
@@ -156,16 +179,17 @@
           "refId": "tzc"
         }
       ],
-      "title": "Topic Deletion Metadata Propagation ms",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
+      "title": "Topic Deletion Metadata Propagation ms",
       "tooltip": {
         "shared": true,
         "sort": 0,
         "value_type": "individual"
       },
+      "type": "graph",
       "xaxis": {
         "buckets": null,
         "mode": "time",
@@ -173,11 +197,28 @@
         "show": true,
         "values": []
       },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
       "yaxis": {
         "align": false,
         "alignLevel": null
-      },
-      "type": "graph"
+      }
     }
   ],
   "schemaVersion": 26,
@@ -193,25 +234,6 @@
   "timepicker": {},
   "timezone": "",
   "title": "Cluster Topic Manipulation",
-  "thresholds": [],
-  "timeFrom": null,
-  "timeRegions": [],
-  "timeShift": null,
-  "tooltip": {
-    "shared": true,
-    "sort": 0,
-    "value_type": "individual"
-  },
-  "xaxis": {
-    "buckets": null,
-    "mode": "time",
-    "name": null,
-    "show": true,
-    "values": []
-  },
-  "yaxis": {
-    "align": false,
-    "alignLevel": null
-  },
-  "version": 1
+  "uid": "atpGqrRnk",
+  "version": 2
 }

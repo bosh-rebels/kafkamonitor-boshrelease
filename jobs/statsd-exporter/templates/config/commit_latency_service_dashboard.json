@@ -15,11 +15,11 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
+  "id": 41,
   "links": [],
   "panels": [
     {
       "aliasColors": {},
-      "id": 609,
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -32,7 +32,14 @@
       },
       "fill": 1,
       "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
       "hiddenSeries": false,
+      "id": 609,
       "legend": {
         "avg": false,
         "current": false,
@@ -57,10 +64,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
       "targets": [
         {
           "expr": "kafka_monitor_commit_latency_service_consume_service_commit_offset_latency_ms_9999th",
@@ -93,16 +96,17 @@
           "refId": "MCp"
         }
       ],
-      "title": "Commit Offset Latency ms",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
+      "title": "Commit Offset Latency ms",
       "tooltip": {
         "shared": true,
         "sort": 0,
         "value_type": "individual"
       },
+      "type": "graph",
       "xaxis": {
         "buckets": null,
         "mode": "time",
@@ -110,15 +114,31 @@
         "show": true,
         "values": []
       },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
       "yaxis": {
         "align": false,
         "alignLevel": null
-      },
-      "type": "graph"
+      }
     },
     {
       "aliasColors": {},
-      "id": 81,
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -131,7 +151,14 @@
       },
       "fill": 1,
       "fillGradient": 0,
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
       "hiddenSeries": false,
+      "id": 81,
       "legend": {
         "avg": false,
         "current": false,
@@ -156,10 +183,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
       "targets": [
         {
           "expr": "kafka_monitor_commit_latency_service_single_cluster_monitor_commit_offset_latency_ms_9999th",
@@ -192,16 +215,17 @@
           "refId": "PCj"
         }
       ],
-      "title": "Single Cluster Commit Offset Latency ms",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
+      "title": "Single Cluster Commit Offset Latency ms",
       "tooltip": {
         "shared": true,
         "sort": 0,
         "value_type": "individual"
       },
+      "type": "graph",
       "xaxis": {
         "buckets": null,
         "mode": "time",
@@ -209,11 +233,28 @@
         "show": true,
         "values": []
       },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
       "yaxis": {
         "align": false,
         "alignLevel": null
-      },
-      "type": "graph"
+      }
     }
   ],
   "schemaVersion": 26,
@@ -229,25 +270,6 @@
   "timepicker": {},
   "timezone": "",
   "title": "Commit Latency",
-  "thresholds": [],
-  "timeFrom": null,
-  "timeRegions": [],
-  "timeShift": null,
-  "tooltip": {
-    "shared": true,
-    "sort": 0,
-    "value_type": "individual"
-  },
-  "xaxis": {
-    "buckets": null,
-    "mode": "time",
-    "name": null,
-    "show": true,
-    "values": []
-  },
-  "yaxis": {
-    "align": false,
-    "alignLevel": null
-  },
+  "uid": "PDFnq9g7z",
   "version": 1
 }
