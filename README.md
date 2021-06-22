@@ -23,6 +23,13 @@ While writing this bosh release we found out the we had to identify first all th
 
 On the version of [Kafka-Monitor] used (2.5.0) by this boshrelease the metrics found are described in [this json file](docs/metrics.json).
 
+## Screenshots from Grafana dashboards
+
+![Cluster Topic Manipulation](docs/screenshots/cluster_topic_manipulation.png)
+![Commit Availability](docs/screenshots/commit_availability.png)
+![Commit Latency](docs/screenshots/commit_latency.png)
+![Offset Commit](docs/screenshots/offset_commit.png)
+![Produce](docs/screenshots/produce.png)
 
 [Kafka-Monitor]: https://github.com/linkedin/kafka-monitor
 [jolokia]: https://jolokia.org/
