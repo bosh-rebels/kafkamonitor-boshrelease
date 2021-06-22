@@ -57,7 +57,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "consume_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -68,77 +67,7 @@
           "interval": "",
           "legendFormat": "failed_commit_offsets_avg",
           "refId": "cik"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 359,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "consume_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_commit_availability_service_consume_service_failed_commit_offsets_total",
           "interval": "",
@@ -146,83 +75,7 @@
           "refId": "AEL"
         }
       ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 491,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "consume_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
-        {
-          "expr": "kafka_monitor_commit_availability_service_consume_service_offsets_committed_avg",
-          "interval": "",
-          "legendFormat": "offsets_committed_avg",
-          "refId": "jtg"
-        }
-      ],
-      "title": "commit_availability_service",
+      "title": "Failed Commit Offsets",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -285,7 +138,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "consume_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -296,9 +148,15 @@
           "interval": "",
           "legendFormat": "offsets_committed_total",
           "refId": "bIP"
+        },
+        {
+          "expr": "kafka_monitor_commit_availability_service_consume_service_offsets_committed_avg",
+          "interval": "",
+          "legendFormat": "offsets_committed_avg",
+          "refId": "jtg"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Offsets Committed",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -361,7 +219,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -372,77 +229,7 @@
           "interval": "",
           "legendFormat": "failed_commit_offsets_avg",
           "refId": "IFq"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 809,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_commit_availability_service_single_cluster_monitor_failed_commit_offsets_total",
           "interval": "",
@@ -450,83 +237,7 @@
           "refId": "wni"
         }
       ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 19,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
-        {
-          "expr": "kafka_monitor_commit_availability_service_single_cluster_monitor_offsets_committed_avg",
-          "interval": "",
-          "legendFormat": "offsets_committed_avg",
-          "refId": "tHc"
-        }
-      ],
-      "title": "commit_availability_service",
+      "title": "Single Cluster Failed Commit Offsets",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -589,7 +300,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -600,9 +310,16 @@
           "interval": "",
           "legendFormat": "offsets_committed_total",
           "refId": "aHd"
+        },
+        {
+          "expr": "kafka_monitor_commit_availability_service_single_cluster_monitor_offsets_committed_avg",
+          "interval": "",
+          "legendFormat": "offsets_committed_avg",
+          "refId": "tHc"
         }
+
       ],
-      "title": "commit_availability_service",
+      "title": "Single Cluster Offsets Committed",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -665,7 +382,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "consume_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -678,7 +394,7 @@
           "refId": "wTM"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Consume Availability",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -741,7 +457,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "consume_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -752,77 +467,7 @@
           "interval": "",
           "legendFormat": "consume_error_rate",
           "refId": "RaF"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 719,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "consume_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_consume_service_consume_service_consume_error_total",
           "interval": "",
@@ -830,83 +475,7 @@
           "refId": "ScE"
         }
       ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 644,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "consume_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
-        {
-          "expr": "kafka_monitor_consume_service_consume_service_records_consumed_rate",
-          "interval": "",
-          "legendFormat": "records_consumed_rate",
-          "refId": "hiz"
-        }
-      ],
-      "title": "commit_availability_service",
+      "title": "Consume Error",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -969,7 +538,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "consume_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -980,85 +548,15 @@
           "interval": "",
           "legendFormat": "records_consumed_total",
           "refId": "sHE"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 612,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "consume_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
-          "expr": "kafka_monitor_consume_service_consume_service_records_delay_ms_9999th",
+          "expr": "kafka_monitor_consume_service_consume_service_records_consumed_rate",
           "interval": "",
-          "legendFormat": "records_delay_ms_9999th",
-          "refId": "mwv"
+          "legendFormat": "records_consumed_rate",
+          "refId": "hiz"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Records Consumed",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -1121,7 +619,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "consume_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -1132,313 +629,33 @@
           "interval": "",
           "legendFormat": "records_delay_ms_999th",
           "refId": "krG"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 894,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "consume_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_consume_service_consume_service_records_delay_ms_99th",
           "interval": "",
           "legendFormat": "records_delay_ms_99th",
           "refId": "YKM"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 720,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "consume_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_consume_service_consume_service_records_delay_ms_avg",
           "interval": "",
           "legendFormat": "records_delay_ms_avg",
           "refId": "tPs"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 467,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "consume_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_consume_service_consume_service_records_delay_ms_max",
           "interval": "",
           "legendFormat": "records_delay_ms_max",
           "refId": "uUm"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 467,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "consume_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
-          "expr": "kafka_monitor_consume_service_consume_service_records_delayed_rate",
+          "expr": "kafka_monitor_consume_service_consume_service_records_delay_ms_9999th",
           "interval": "",
-          "legendFormat": "records_delayed_rate",
-          "refId": "EtK"
+          "legendFormat": "records_delay_ms_9999th",
+          "refId": "mwv"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Records Delay ms",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -1501,7 +718,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "consume_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -1512,85 +728,15 @@
           "interval": "",
           "legendFormat": "records_delayed_total",
           "refId": "oeL"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 929,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "consume_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
-          "expr": "kafka_monitor_consume_service_consume_service_records_duplicated_rate",
+          "expr": "kafka_monitor_consume_service_consume_service_records_delayed_rate",
           "interval": "",
-          "legendFormat": "records_duplicated_rate",
-          "refId": "wXS"
+          "legendFormat": "records_delayed_rate",
+          "refId": "EtK"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Records Delayed",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -1653,7 +799,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "consume_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -1664,85 +809,15 @@
           "interval": "",
           "legendFormat": "records_duplicated_total",
           "refId": "MwR"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 615,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "consume_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
-          "expr": "kafka_monitor_consume_service_consume_service_records_lost_rate",
+          "expr": "kafka_monitor_consume_service_consume_service_records_duplicated_rate",
           "interval": "",
-          "legendFormat": "records_lost_rate",
-          "refId": "yXo"
+          "legendFormat": "records_duplicated_rate",
+          "refId": "wXS"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Records Duplicated",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -1805,7 +880,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "consume_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -1816,9 +890,15 @@
           "interval": "",
           "legendFormat": "records_lost_total",
           "refId": "PMF"
+        },
+        {
+          "expr": "kafka_monitor_consume_service_consume_service_records_lost_rate",
+          "interval": "",
+          "legendFormat": "records_lost_rate",
+          "refId": "yXo"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Records Lost",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -1881,7 +961,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -1894,83 +973,7 @@
           "refId": "fiD"
         }
       ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 406,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
-        },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
-        {
-          "expr": "kafka_monitor_consume_service_single_cluster_monitor_consume_error_rate",
-          "interval": "",
-          "legendFormat": "consume_error_rate",
-          "refId": "mZd"
-        }
-      ],
-      "title": "commit_availability_service",
+      "title": "Single Cluster Consume Availability",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -2033,7 +1036,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -2044,85 +1046,15 @@
           "interval": "",
           "legendFormat": "consume_error_total",
           "refId": "lHg"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 554,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
-          "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_consumed_rate",
+          "expr": "kafka_monitor_consume_service_single_cluster_monitor_consume_error_rate",
           "interval": "",
-          "legendFormat": "records_consumed_rate",
-          "refId": "FhA"
+          "legendFormat": "consume_error_rate",
+          "refId": "mZd"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Single Cluster Consume Error",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -2185,7 +1117,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -2196,85 +1127,15 @@
           "interval": "",
           "legendFormat": "records_consumed_total",
           "refId": "pZN"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 758,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
-          "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delay_ms_9999th",
+          "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_consumed_rate",
           "interval": "",
-          "legendFormat": "records_delay_ms_9999th",
-          "refId": "CUC"
+          "legendFormat": "records_consumed_rate",
+          "refId": "FhA"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Single Cluster Records Consumed",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -2337,240 +1198,35 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
       },
       "targets": [
+        {
+          "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delay_ms_9999th",
+          "interval": "",
+          "legendFormat": "records_delay_ms_9999th",
+          "refId": "CUC"
+        },
         {
           "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delay_ms_999th",
           "interval": "",
           "legendFormat": "records_delay_ms_999th",
           "refId": "vyr"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 777,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delay_ms_99th",
           "interval": "",
           "legendFormat": "records_delay_ms_99th",
           "refId": "iJT"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 954,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delay_ms_avg",
           "interval": "",
           "legendFormat": "records_delay_ms_avg",
           "refId": "jbh"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 219,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delay_ms_max",
           "interval": "",
@@ -2578,7 +1234,7 @@
           "refId": "cey"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Single Cluster Records Delay ms",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -2641,7 +1297,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -2652,77 +1307,7 @@
           "interval": "",
           "legendFormat": "records_delayed_rate",
           "refId": "dfc"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 459,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_delayed_total",
           "interval": "",
@@ -2730,7 +1315,7 @@
           "refId": "wkn"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Single Cluster Records Delayed",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -2793,7 +1378,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -2804,77 +1388,7 @@
           "interval": "",
           "legendFormat": "records_duplicated_rate",
           "refId": "LXK"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 969,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_duplicated_total",
           "interval": "",
@@ -2882,7 +1396,7 @@
           "refId": "Guh"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Single Cluster Records Duplicated",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -2945,7 +1459,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -2956,77 +1469,7 @@
           "interval": "",
           "legendFormat": "records_lost_rate",
           "refId": "wKz"
-        }
-      ],
-      "title": "commit_availability_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 741,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_consume_service_single_cluster_monitor_records_lost_total",
           "interval": "",
@@ -3034,7 +1477,7 @@
           "refId": "XLB"
         }
       ],
-      "title": "commit_availability_service",
+      "title": "Single Cluster Records Lost",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],

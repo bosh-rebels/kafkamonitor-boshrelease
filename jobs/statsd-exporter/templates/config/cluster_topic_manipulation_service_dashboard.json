@@ -57,7 +57,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "cluster_topic_manipulation_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -68,77 +67,7 @@
           "interval": "",
           "legendFormat": "topic_creation_metadata_propagation_ms_avg",
           "refId": "jnr"
-        }
-      ],
-      "title": "cluster_topic_manipulation_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "id":747,
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "cluster_topic_manipulation_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_cluster_topic_manipulation_service_cluster_topic_manipulation_service_topic_creation_metadata_propagation_ms_max",
           "interval": "",
@@ -146,7 +75,7 @@
           "refId": "JGb"
         }
       ],
-      "title": "cluster_topic_manipulation_service",
+      "title": "Topic Creation Metadata Propagation ms",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -209,7 +138,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "cluster_topic_manipulation_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -220,77 +148,7 @@
           "interval": "",
           "legendFormat": "topic_deletion_metadata_propagation_ms_avg",
           "refId": "aCn"
-        }
-      ],
-      "title": "cluster_topic_manipulation_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "id":450,
-      "aliasColors": {},
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "cluster_topic_manipulation_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_cluster_topic_manipulation_service_cluster_topic_manipulation_service_topic_deletion_metadata_propagation_ms_max",
           "interval": "",
@@ -298,7 +156,7 @@
           "refId": "tzc"
         }
       ],
-      "title": "cluster_topic_manipulation_service",
+      "title": "Topic Deletion Metadata Propagation ms",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],

@@ -57,7 +57,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "produce_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -70,7 +69,7 @@
           "refId": "pFa"
         }
       ],
-      "title": "produce_service",
+      "title": "Availability",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -133,7 +132,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "produce_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -144,305 +142,25 @@
           "interval": "",
           "legendFormat": "produce_delay_ms_9999th",
           "refId": "XZv"
-        }
-      ],
-      "title": "produce_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 240,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "produce_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_produce_service_produce_service_produce_delay_ms_999th",
           "interval": "",
           "legendFormat": "produce_delay_ms_999th",
           "refId": "BQY"
-        }
-      ],
-      "title": "produce_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 730,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "produce_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_produce_service_produce_service_produce_delay_ms_99th",
           "interval": "",
           "legendFormat": "produce_delay_ms_99th",
           "refId": "hma"
-        }
-      ],
-      "title": "produce_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 518,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "produce_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_produce_service_produce_service_produce_delay_ms_avg",
           "interval": "",
           "legendFormat": "produce_delay_ms_avg",
           "refId": "Wsq"
-        }
-      ],
-      "title": "produce_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 411,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "produce_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_produce_service_produce_service_produce_delay_ms_max",
           "interval": "",
@@ -450,7 +168,7 @@
           "refId": "atQ"
         }
       ],
-      "title": "produce_service",
+      "title": "Delay ms",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -513,7 +231,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "produce_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -524,77 +241,7 @@
           "interval": "",
           "legendFormat": "produce_error_rate",
           "refId": "Ixe"
-        }
-      ],
-      "title": "produce_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 306,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "produce_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_produce_service_produce_service_produce_error_total",
           "interval": "",
@@ -602,7 +249,7 @@
           "refId": "ETL"
         }
       ],
-      "title": "produce_service",
+      "title": "Error",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -665,7 +312,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "produce_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -676,77 +322,7 @@
           "interval": "",
           "legendFormat": "records_produced_rate",
           "refId": "qlo"
-        }
-      ],
-      "title": "produce_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 27,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "produce_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_produce_service_produce_service_records_produced_total",
           "interval": "",
@@ -754,7 +330,7 @@
           "refId": "UDl"
         }
       ],
-      "title": "produce_service",
+      "title": "Records Produced",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -817,7 +393,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -830,7 +405,7 @@
           "refId": "Xba"
         }
       ],
-      "title": "produce_service",
+      "title": "Single Cluster Availability",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -893,7 +468,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -904,305 +478,25 @@
           "interval": "",
           "legendFormat": "produce_delay_ms_9999th",
           "refId": "sWg"
-        }
-      ],
-      "title": "produce_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 617,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_delay_ms_999th",
           "interval": "",
           "legendFormat": "produce_delay_ms_999th",
           "refId": "qyI"
-        }
-      ],
-      "title": "produce_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 652,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_delay_ms_99th",
           "interval": "",
           "legendFormat": "produce_delay_ms_99th",
           "refId": "GXT"
-        }
-      ],
-      "title": "produce_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 38,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_delay_ms_avg",
           "interval": "",
           "legendFormat": "produce_delay_ms_avg",
           "refId": "IqV"
-        }
-      ],
-      "title": "produce_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 801,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_delay_ms_max",
           "interval": "",
@@ -1210,7 +504,7 @@
           "refId": "xyG"
         }
       ],
-      "title": "produce_service",
+      "title": "Single Cluster Delay ms",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -1273,7 +567,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -1284,77 +577,7 @@
           "interval": "",
           "legendFormat": "produce_error_rate",
           "refId": "hJx"
-        }
-      ],
-      "title": "produce_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 135,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_produce_service_single_cluster_monitor_produce_error_total",
           "interval": "",
@@ -1362,7 +585,7 @@
           "refId": "vnC"
         }
       ],
-      "title": "produce_service",
+      "title": "Single Cluster Error",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -1425,7 +648,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "single_cluster_monitor",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -1436,77 +658,7 @@
           "interval": "",
           "legendFormat": "records_produced_rate",
           "refId": "Uvm"
-        }
-      ],
-      "title": "produce_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 308,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "single_cluster_monitor",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_produce_service_single_cluster_monitor_records_produced_total",
           "interval": "",
@@ -1514,7 +666,7 @@
           "refId": "yEj"
         }
       ],
-      "title": "produce_service",
+      "title": "Single Cluster Records Produced",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],

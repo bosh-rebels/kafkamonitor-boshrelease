@@ -57,7 +57,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "offset_commit_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -70,7 +69,7 @@
           "refId": "ETw"
         }
       ],
-      "title": "offset_commit_service",
+      "title": "Availability",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -133,7 +132,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "offset_commit_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -144,77 +142,7 @@
           "interval": "",
           "legendFormat": "failure_rate",
           "refId": "BWt"
-        }
-      ],
-      "title": "offset_commit_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 372,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "offset_commit_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_offset_commit_service_offset_commit_service_offset_commit_service_failure_total",
           "interval": "",
@@ -222,7 +150,7 @@
           "refId": "bqJ"
         }
       ],
-      "title": "offset_commit_service",
+      "title": "Failure",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
@@ -285,7 +213,6 @@
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
-      "description": "offset_commit_service",
       "gridPos": {
         "h": 9,
         "w": 12
@@ -296,77 +223,7 @@
           "interval": "",
           "legendFormat": "success_rate",
           "refId": "KGV"
-        }
-      ],
-      "title": "offset_commit_service",
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      },
-      "type": "graph"
-    },
-    {
-      "aliasColors": {},
-      "id": 92,
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "custom": {}
         },
-        "overrides": []
-      },
-      "fill": 1,
-      "fillGradient": 0,
-      "hiddenSeries": false,
-      "legend": {
-        "avg": false,
-        "current": false,
-        "max": false,
-        "min": false,
-        "show": true,
-        "total": false,
-        "values": false
-      },
-      "lines": true,
-      "linewidth": 1,
-      "nullPointMode": "null",
-      "options": {
-        "alertThreshold": true
-      },
-      "percentage": false,
-      "pluginVersion": "7.3.3",
-      "pointradius": 2,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "description": "offset_commit_service",
-      "gridPos": {
-        "h": 9,
-        "w": 12
-      },
-      "targets": [
         {
           "expr": "kafka_monitor_offset_commit_service_offset_commit_service_offset_commit_service_success_total",
           "interval": "",
@@ -374,7 +231,7 @@
           "refId": "dQA"
         }
       ],
-      "title": "offset_commit_service",
+      "title": "Success",
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
