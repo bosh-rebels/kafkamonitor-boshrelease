@@ -23,6 +23,36 @@ consumes:
   type: conn
 
 properties:
+  replication_factor:
+    default: 1
+
+  partitions_to_brokers_ratio:
+    default: 2.0
+
+  request.timeout_ms:
+    default: 9000
+
+  produce.record_delay_ms:
+    default: 100
+
+  topic_management.topic_management_enabled:
+    default: true
+
+  topic_management.topic_creation_enabled:
+    default: true
+
+  topic_management.rebalance_interval_ms:
+    default: 600000
+
+  topic_management.preferred_leader_election_check_interval_ms:
+    default: 300000
+
+  produce.client.id:
+    default: kmf-client-id
+
+  topic:
+    default: xinfra-monitor-topic
+
   monitored.mbeans:
     description: Java beans to monitor with the static dashboard
     default: |

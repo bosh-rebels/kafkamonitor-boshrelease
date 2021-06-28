@@ -53,24 +53,24 @@ bootstrap_servers = kafka.instances.map { |instance| "#{instance.address}:#{kafk
 {
   "single-cluster-monitor": {
     "class.name": "com.linkedin.xinfra.monitor.apps.SingleClusterMonitor",
-    "topic": "xinfra-monitor-topic",
+    "topic": "<%= p('topic') %>",
     "zookeeper.connect": "<%= zookeeper_connect %>",
     "bootstrap.servers": "<%= bootstrap_servers %>",
-    "request.timeout.ms": 9000,
-    "produce.record.delay.ms": 100,
-    "topic-management.topicManagementEnabled": true,
-    "topic-management.topicCreationEnabled": true,
-    "topic-management.replicationFactor" : 1,
-    "topic-management.partitionsToBrokersRatio" : 2.0,
-    "topic-management.rebalance.interval.ms" : 600000,
-    "topic-management.preferred.leader.election.check.interval.ms" : 300000,
+    "request.timeout.ms": <%= p('request.timeout_ms') %>,
+    "produce.record.delay.ms": <%= p('produce.record_delay_ms') %>,
+    "topic-management.topicManagementEnabled": <%= p('topic_management.topic_management_enabled') %>,
+    "topic-management.topicCreationEnabled": <%= p('topic_management.topic_creation_enabled') %>,
+    "topic-management.replicationFactor" : <%= p('replication_factor') %>,
+    "topic-management.partitionsToBrokersRatio" : <%= p('partitions_to_brokers_ratio') %>,
+    "topic-management.rebalance.interval.ms" : <%= p('topic_management.rebalance_interval_ms') %>,
+    "topic-management.preferred.leader.election.check.interval.ms" : <%= p('topic_management.preferred_leader_election_check_interval_ms') %>,
     "topic-management.topicFactory.props": {
     },
     "topic-management.topic.props": {
       "retention.ms": "3600000"
     },
     "produce.producer.props": {
-      "client.id": "kmf-client-id"
+      "client.id": "<%= p('produce.client.id') %>"
     },
 
     "consume.latency.sla.ms": "20000",
@@ -147,13 +147,13 @@ bootstrap_servers = kafka.instances.map { |instance| "#{instance.address}:#{kafk
      "class.name":"com.linkedin.xinfra.monitor.services.ClusterTopicManipulationService",
      "zookeeper.connect": "<%= zookeeper_connect %>",
      "bootstrap.servers": "<%= bootstrap_servers %>",
-     "topic": "xinfra-monitor-topic"
+     "topic": "<%= p('topic') %>"
   },
 
 # Example produce-service to produce messages to cluster
   "produce-service": {
       "class.name": "com.linkedin.xinfra.monitor.services.ProduceService",
-      "topic": "xinfra-monitor-topic",
+      "topic": "<%= p('topic') %>",
       "zookeeper.connect": "<%= zookeeper_connect %>",
       "bootstrap.servers": "<%= bootstrap_servers %>",
       "consume.latency.sla.ms": "20000",
@@ -164,7 +164,7 @@ bootstrap_servers = kafka.instances.map { |instance| "#{instance.address}:#{kafk
 # Example consume-service to consume messages
   "consume-service": {
       "class.name": "com.linkedin.xinfra.monitor.services.ConsumeService",
-      "topic": "xinfra-monitor-topic",
+      "topic": "<%= p('topic') %>",
       "zookeeper.connect": "<%= zookeeper_connect %>",
       "bootstrap.servers": "<%= bootstrap_servers %>",
       "consume.latency.sla.ms": "20000",
@@ -234,7 +234,7 @@ bootstrap_servers = kafka.instances.map { |instance| "#{instance.address}:#{kafk
     "report.interval.sec": 3,
     "zookeeper.connect": "<%= zookeeper_connect %>",
     "bootstrap.servers": "<%= bootstrap_servers %>",
-    "topic": "xinfra-monitor-topic-metrics",
+    "topic": "<%= p('topic') %>-metrics",
     "report.kafka.topic.replication.factor": 1,
     "report.metrics.list": [
       "kmf.services:type=produce-service,name=*:produce-availability-avg",
