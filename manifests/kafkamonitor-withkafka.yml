@@ -32,7 +32,7 @@ instance_groups:
   vm_resources:
     cpu: 2
     ram: 2048
-    ephemeral_disk_size: 10240
+    ephemeral_disk_size: 20480
   stemcell: default
   persistent_disk: 102400
   networks: [{name: default}]
@@ -90,7 +90,10 @@ instance_groups:
   - name: kafka-monitor
     release: kafka-monitor
     properties:
+      partitions_to_brokers_ratio: 3.0
       replication_factor: 3
+      produce:
+        record_delay_ms: 1
   - name: statsd-exporter
     release: kafka-monitor
     properties: {}
@@ -108,9 +111,11 @@ instance_groups:
   - name: kafka-monitor
     release: kafka-monitor
     properties:
+      partitions_to_brokers_ratio: 3.0
       replication_factor: 2
       topic: xinfra-monitor-topic2
       produce:
+        record_delay_ms: 1
         client:
           id: kmf-client-id2
     default: kmf-client-id
