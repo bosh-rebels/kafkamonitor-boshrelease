@@ -1,0 +1,106 @@
+#!/usr/bin/env bash
+
+set -eu -o pipefail
+
+source /var/vcap/packages/openjdk-8-kafka/bosh/runtime.env
+export PATH=$PATH:/var/vcap/packages/kafka/bin:$PATH
+
+KAFKA_CONF=/var/vcap/jobs/kafka/config/server.properties
+
+export CLASSPATH=${CLASSPATH:-''}
+for jar_dir in $(ls -d /var/vcap/packages/kafka/**/*.jar); do
+  export CLASSPATH=${jar_dir}:$CLASSPATH
+done
+
+death_probability=<%= p("death_probability") %>
+ruin_probability=<%= p("ruin_probability") %>
+stop_probability=<%= p("stop_probability") %>
+
+<% zookeeper_link = link('zookeeper') %>
+<% zookeeper_port = zookeeper_link.p('client_port') %>
+<% zookeepers =  zookeeper_link.instances.map { |instance| "#{instance.address}:#{zookeeper_port}" }.join(",") %>
+
+timestamp=$(date "+%Y%m%d%H%M")
+
+# fail hard and fast if unaffected_zone does not match instance region zone or is empty
+<%
+if_p("unaffected_zone") do |az|
+  if az == spec.az %>
+echo Region zone <%= spec.az %> is not targeted by chaos.
+exit 0
+<%
+  end
+end %>
+
+# fail hard and fast if affected_zone does not match instance region zone or is empty
+<%
+if_p("affected_zone") do |az|
+  if az != spec.az %>
+echo Region zone <%= spec.az %> is not targeted by chaos.
+exit 0
+<%
+  end
+end %>
+
+# get a random number between 1-100
+death_roll=$[ $RANDOM % 100 + 1 ]
+ruin_roll=$[ $RANDOM % 100 + 1 ]
+stop_roll=$[ $RANDOM % 100 + 1 ]
+
+ruin_kafka() {
+  sleep 5
+  echo cannot run from the chaos >> $KAFKA_CONF
+  /var/vcap/bosh/bin/monit restart kafka
+}
+
+kill_instance() {
+  sleep 5
+  halt -d -f -p
+}
+
+stop_kafka() {
+  sleep 5
+  /var/vcap/bosh/bin/monit stop kafka
+}
+
+# based on the death_probability property 0-100 declare if instance is killable where 0 is never and >=100 is certain
+# based on the ruin_probability property 0-100 declare if service should be ruined instead where 0 is never and >=100 is certain
+
+# kill instance if death_probability is reached
+if [[ $death_probability -ge 1 && $death_roll -le $death_probability ]]; then
+  cat<<EOF
+Death probablility set $death_probability
+Death rolled $death_roll
+This machine needs to die. Sorry.
+EOF
+
+  kill_instance </dev/null &>/dev/null &
+  exit 0
+fi
+
+# if ruin_probability is reached and the machine is a kafka instance
+# terminate kafka service and ruin kafka configuration
+if [[ -f $KAFKA_CONF && $ruin_probability -ge 1 && $ruin_roll -le $ruin_probability ]]; then
+  cat<<EOF
+Ruin probablility set $ruin_probability
+Ruin rolled $ruin_roll
+This kafka service will be tampered and will not recover this. Sorry.
+EOF
+
+  ruin_kafka </dev/null &>/dev/null &
+  exit 0
+fi
+
+# if stop_probability is reached and the machine is a kafka instance
+# pause kafka service
+if [[ -f $KAFKA_CONF && $stop_probability -ge 1 && $stop_roll -le $stop_probability ]]; then
+  cat<<EOF
+Stop probablility set $stop_probability
+Stop rolled $stop_roll
+This kafka service will be stop till started from BOSH director. Sorry.
+EOF
+
+  stop_kafka </dev/null &>/dev/null &
+  exit 0
+fi
+

@@ -37,6 +37,9 @@ instance_groups:
   persistent_disk: 102400
   networks: [{name: default}]
   jobs:
+  - name: kafka-chaos
+    release: kafka-monitor
+    properties: {}
   - name: jmx-exporter
     release: jmx-exporter
     properties: {}
