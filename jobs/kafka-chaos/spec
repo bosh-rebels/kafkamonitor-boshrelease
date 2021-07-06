@@ -17,7 +17,7 @@ properties:
 
   ruin_probability:
     description: Range of 0-100 declare if service should be ruined where 0 is never and >=100 is certain. This exposes service misconfiguration.
-    default: 0
+    default: 5
 
   stop_probability:
     description: Range of 0-100 declare if service should sleep for a while where 0 is never and >=100 is certain. This exposes a quite busy redis service and probable network delay or firewall issue.
