@@ -12,15 +12,19 @@ consumes:
 
 properties:
   death_probability:
-    description: Range of 0-100 declare if instance is killable where 0 is never and >=100 is certain. This exposes VM destruction.
+    description: Range of 0-100 declare if instance is killable where 0 is never and >=100 is certain. This simulates VM destruction.
     default: 10
 
   ruin_probability:
-    description: Range of 0-100 declare if service should be ruined where 0 is never and >=100 is certain. This exposes service misconfiguration.
+    description: Range of 0-100 declare if service should be ruined where 0 is never and >=100 is certain. This simulates service misconfiguration.
     default: 5
 
   stop_probability:
-    description: Range of 0-100 declare if service should sleep for a while where 0 is never and >=100 is certain. This exposes a quite busy redis service and probable network delay or firewall issue.
+    description: Range of 0-100 declare if service should stop for a while where 0 is never and >=100 is certain. This simulates a sudden termination of the service.
+    default: 20
+
+  mute_probability:
+    description: Range of 0-100 declare if service should be muted where 0 is never and >=100 is certain. This simulates a firewall/network issue.
     default: 20
 
   affected_zone:

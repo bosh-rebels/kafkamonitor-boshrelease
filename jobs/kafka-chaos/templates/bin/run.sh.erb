@@ -15,6 +15,7 @@ done
 death_probability=<%= p("death_probability") %>
 ruin_probability=<%= p("ruin_probability") %>
 stop_probability=<%= p("stop_probability") %>
+mute_probability=<%= p("mute_probability") %>
 
 <% zookeeper_link = link('zookeeper') %>
 <% zookeeper_port = zookeeper_link.p('client_port') %>
@@ -46,10 +47,11 @@ end %>
 death_roll=$[ $RANDOM % 100 + 1 ]
 ruin_roll=$[ $RANDOM % 100 + 1 ]
 stop_roll=$[ $RANDOM % 100 + 1 ]
+mute_roll=$[ $RANDOM % 100 + 1 ]
 
 ruin_kafka() {
   sleep 5
-  echo cannot run from the chaos >> $KAFKA_CONF
+  rm -f $KAFKA_CONF
   /var/vcap/bosh/bin/monit restart kafka
 }
 
@@ -61,6 +63,27 @@ kill_instance() {
 stop_kafka() {
   sleep 5
   kill -9 $(cat /var/vcap/sys/run/bpm/kafka/kafka.pid)
+}
+
+mute_kafka() {
+  sleep 5
+  # Flushing all rules
+  iptables -F
+  iptables -X
+  # Setting default filter policy
+  iptables -P INPUT DROP
+  iptables -P OUTPUT DROP
+  iptables -P FORWARD DROP
+  # Allow unlimited traffic on loopback
+  iptables -A INPUT -i lo -j ACCEPT
+  iptables -A OUTPUT -o lo -j ACCEPT
+
+  # Allow incoming ssh only
+  iptables -A INPUT -p tcp -s 0/0 -d <%= spec.address %> --sport 513:65535 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+  iptables -A OUTPUT -p tcp -s <%= spec.address %> -d 0/0 --sport 22 --dport 513:65535 -m state --state ESTABLISHED -j ACCEPT
+  # make sure nothing comes or goes out of this box
+  iptables -A INPUT -j DROP
+  iptables -A OUTPUT -j DROP
 }
 
 # based on the death_probability property 0-100 declare if instance is killable where 0 is never and >=100 is certain
@@ -104,3 +127,15 @@ EOF
   exit 0
 fi
 
+# if mute_probability is reached and the machine is a kafka instance
+# mute kafka service
+if [[ $mute_probability -ge 1 && $mute_roll -le $mute_probability ]]; then
+  cat<<EOF
+Stop probablility set $mute_probability
+Stop rolled $mute_roll
+This kafka instance will be muted allowing no network traffic but ssh. Sorry.
+EOF
+
+  mute_kafka </dev/null &>/dev/null &
+  exit 0
+fi

@@ -39,7 +39,8 @@ instance_groups:
   jobs:
   - name: kafka-chaos
     release: kafka-monitor
-    properties: {}
+    properties:
+      ruin_probability: 20
   - name: jmx-exporter
     release: jmx-exporter
     properties: {}
