@@ -60,7 +60,7 @@ kill_instance() {
 
 stop_kafka() {
   sleep 5
-  /var/vcap/bosh/bin/monit stop kafka
+  kill -9 $(cat /var/vcap/sys/run/bpm/kafka/kafka.pid)
 }
 
 # based on the death_probability property 0-100 declare if instance is killable where 0 is never and >=100 is certain
